@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "name": "Fiza Ansar",
+      "phone": 123,
+      "email": "fiza@gmail.com",
+      "password": "Fiza123",
+      "id": 1
+    },
+    {
+      "name": "Ranya Jabbar",
+      "phone": 123,
+      "email": "ranya@gmail.com",
+      "password": "Ranya123",
+      "id": 2
+    },
+    {
+      "name": "Misbah Ashiq",
+      "phone": 123,
+      "email": "Misbah098@gmail.com",
+      "password": "Misbah123",
+      "id": 3
+    },
+    {
+      "name": "Hassan",
+      "phone": 3060619136,
+      "email": "hassanmalik8258@gmail.com",
+      "password": "123hassan",
+      "id": 4
+    },
+    {
+      "name": "Fiza Ansar",
+      "phone": 3167785160,
+      "email": "fizaansar098@gmail.com",
+      "password": "123fiza",
+      "id": 5
+    }
+  ]
+}

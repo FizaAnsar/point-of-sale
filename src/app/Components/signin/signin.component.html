@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="text-center">
+          <h1>Login</h1>
+        </div>
+        <form #usersignin="ngForm" (ngSubmit)="signIn(usersignin.value)" [formGroup]="loginForm">
+          <div class="mb-1">
+            <label for="email" class="form-label">Email address</label>
+            <div class="input-field" [class.error]="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">
+              <span class="fa fa-user"></span>
+              <input type="email" placeholder="Enter Email" name="email" ngModel formControlName="email">
+            </div>
+          </div>
+          <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"
+            class="text-danger">*Email is Required</small>
+
+          <div class="mb-1">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+              <span class="fa fa-lock"></span>
+              <input [type]="type" placeholder="Enter Password" id="password" name="password" ngModel
+                formControlName="password">
+              <span class="fa {{eyeIcon}}" (click)="hideshow()"></span>
+            </div>
+          </div>
+          <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')"
+            class="text-danger">*Password is Required</small>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <a routerLink="/signup" class="pt-4">New User ? Sign up</a>
+      </div>
+    </div>
+  </div>
+
+</div>
