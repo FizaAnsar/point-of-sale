@@ -53,10 +53,4 @@ export class UserService {
     //  this.router.navigate(['dashboard'])
     })
   }
-//  private loginUrl ="http://192.168.10.215:8080/handi-ear/api/user/login?username=admin&password=admin"
-
-//   loginUser(user:any){
-//     return this.http.post<any>(this.loginUrl,user)
-    
-//   }
 }

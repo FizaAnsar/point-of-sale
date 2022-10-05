@@ -23,7 +23,9 @@
               </div>
             </div>
             <small *ngIf="signUpForm.controls['phone'].dirty && signUpForm.hasError('required','phone')"
-            class="text-danger">*Phone is Required</small>
+            class="text-danger">*Phone number is Required</small>
+            <small *ngIf="signUpForm.controls['phone'].dirty && signUpForm.hasError('maxLength','phone')"
+            class="text-danger">Enter Maximum 10 digits</small>
             <div class="mb-1">
               <label class="form-label">Email address</label>
               <div class="input-field" [class.error]="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">
@@ -31,10 +33,12 @@
                 <input type="email" class="form-control"  placeholder="Enter your Email" name="email" ngModel formControlName="email">
               </div>
             </div>
-            
             <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')"
-            class="text-danger">*Email is Required</small>
+            class="text-danger">Email is Required</small>
+            <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('pattern','email')"
+            class="text-danger">Enter Valid Email</small>
             <div class="mb-1">
+              
               <label class="form-label">Password</label>
               <div class="input-field" [class.error]="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
                 <span class="fa fa-lock" aria-hidden="true"></span>
@@ -44,6 +48,8 @@
             </div>
             <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')"
             class="text-danger">*Password is Required</small>
+            <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('pattern','password')"
+            class="text-danger">Password contains <b>upercase</b>,<b>lowercase</b>,<b>number</b> and minimum <b>8</b> characters</small>
             
            
             <button type="submit" class="btn btn-primary">Sign up</button>

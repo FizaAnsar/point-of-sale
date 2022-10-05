@@ -14,7 +14,9 @@
             </div>
           </div>
           <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')"
-            class="text-danger">*Email is Required</small>
+            class="text-danger">Email is Required</small>
+            <!-- <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('pattern','email')"
+            class="text-danger">Enter Valid Email</small> -->
 
           <div class="mb-1">
             <label for="password" class="form-label">Password</label>
@@ -26,7 +28,9 @@
             </div>
           </div>
           <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')"
-            class="text-danger">*Password is Required</small>
+          class="text-danger">*Password is Required</small>
+          <!-- <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('pattern','password')"
+          class="text-danger">Password should contains <b>upercase</b>,<b>lowercase</b>,<b>number</b> <br/>and minimum <b>8</b> characters</small> -->
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
         <a routerLink="/signup" class="pt-4">New User ? Sign up</a>

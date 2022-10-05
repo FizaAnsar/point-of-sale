@@ -12,17 +12,21 @@ import validateForm from 'src/app/helpers/validateform';
 export class SigninComponent implements OnInit {
   loginForm!: FormGroup;
   constructor(private user:UserService,private fb:FormBuilder) { }
+  emailRegex=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  passwordRegex=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
 
   ngOnInit(): void {
     this.user.reloadUser();
-    this.loginForm = this.fb.group({
-      email:['',Validators.required],
-      password:['',Validators.required],
-    })
+    this.loginForm = new FormGroup({
+      email: new FormControl("", [Validators.required,Validators.maxLength(32),Validators.pattern(this.emailRegex)]),
+      password: new FormControl("", [Validators.required,Validators.pattern(this.passwordRegex)])
+    }
+     
+    )
   }
   signIn(data:any):void{
     if(this.loginForm.valid){
-      // console.log(data);
+      console.log(data);
       this.user.userSignin(data)
       this.loginForm.reset();
 
