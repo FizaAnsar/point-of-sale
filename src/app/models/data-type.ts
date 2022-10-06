@@ -6,7 +6,7 @@ export interface SignUp{
 }
 
 export interface SignIn{
-    email:string,
+    username:string,
     password:string
 }
 

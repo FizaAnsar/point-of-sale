@@ -14,7 +14,7 @@ export class AuthGuard implements CanActivate {
       // this auth guard is for those user who does not logged in and try to redirect main dashboard page.
       // this guard restrict that only those users redirect to dashboard who logged in the app
       //in google search bar write url and try to redirect this auth guard restrict unautherize user
-      if(localStorage.getItem('user')){
+      if(localStorage.getItem('token')){
        return true;
       }
       this.router.navigate(['signin'])

@@ -10,7 +10,7 @@ import validateForm from 'src/app/helpers/validateform';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-  loginForm!: FormGroup;
+  loginForm: FormGroup;
   constructor(private user:UserService,private fb:FormBuilder) { }
   emailRegex=/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   passwordRegex=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -18,16 +18,16 @@ export class SigninComponent implements OnInit {
   ngOnInit(): void {
     this.user.reloadUser();
     this.loginForm = new FormGroup({
-      email: new FormControl("", [Validators.required,Validators.maxLength(32),Validators.pattern(this.emailRegex)]),
-      password: new FormControl("", [Validators.required,Validators.pattern(this.passwordRegex)])
+      username: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required)
     }
      
     )
   }
-  signIn(data:any):void{
+  signIn(data:SignIn):void{
     if(this.loginForm.valid){
       console.log(data);
-      this.user.userSignin(data)
+      this.user.userSignIn(data);
       this.loginForm.reset();
 
     }else{
