@@ -1,0 +1,281 @@
+* {
+    margin: 8px;
+    padding:0;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* category item */
+
+.listsContainer {
+    display: grid;
+    height: 250px;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    box-shadow: -1px 8px 17px 0px rgba(189, 186, 186, 0.75) ;
+    -webkit-box-shadow: -1px 8px 17px 0px rgba(189, 186, 186, 0.75) ;
+    -moz-box-shadow: -1px 8px 17px 0px rgba(189, 186, 186, 0.75) ;
+    overflow-y: scroll;
+}
+.CategorylistsContainer, .CategorylistsContainersmall{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.btnSub{
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgb(224, 216, 216);
+border: 1px solid rgba(0, 0, 0, 0.1);
+width:100%;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 95%;
+    max-width: 100%;
+    border: none;
+    margin: 8px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all ease .25s;
+    font-size: 18px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgb(224, 216, 216);
+border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+
+}
+#btn{
+    border:none;
+    background: transparent;
+}
+.btns:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+    color: rgb(247, 102, 102);
+    /* background-color: rgb(247,102,102); */
+    /* color: #fff; */
+}
+
+.active {
+    background-color: #198754;
+    color: #fff;
+}
+/* responsive of category items */
+.mobdiv{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.resDiv{
+    display: none;
+}
+.menures{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+   
+}
+
+
+/* categories slider */
+.product{
+    
+    padding:0;
+    margin:0;
+    display:flex;
+    /* background: rgb(247, 102, 102); */
+    align-items: center;
+    border-radius: 10px;;
+    background: rgb(247,155,102);
+    background: linear-gradient(45deg, rgba(247,155,102,1) 5%, rgba(245,117,100,1) 46%, rgba(241,161,96,1) 99%);
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgb(250, 242, 242);
+border: 1px solid rgba(0, 0, 0, 0.1);
+height:115px;
+}
+
+.slider-wrap {
+    position: relative;
+    left:-24px;
+    overflow: hidden;
+    height: 115px;
+}
+
+.slider-main {
+    position: absolute;
+    width: 200%;
+}
+
+.item {
+    display: inline-block;
+    width: 160px;
+    background-color: #fff;
+
+    /* height: 130px; */
+    padding: 30px 0;
+    position: relative;
+    /* margin: 0 12px; */
+    text-align: center;
+    border: none;
+    color: #a16504;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 10px;;
+    /* box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgb(240, 236, 236);
+    border: 1px solid rgba(0, 0, 0, 0.1); */
+
+}
+
+.item:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgb(227, 213, 213),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+border: 1px solid rgba(0, 0, 0, 0.1);
+transform: translateY(2px);
+color: rgb(247, 102, 102);
+
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #198754;
+    font-weight: bolder;
+}
+
+.text:hover {
+    color: #198754;
+}
+
+.prev {
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: transparent;
+    color: #0f306d;
+    font-size: 28px;
+}
+
+.next {
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: transparent; color: #0f306d;
+    font-size: 28px;
+}
+/* category slider end */
+
+.btn2{
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:0;
+    width: 80%;
+    border:none;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgb(224, 216, 216);
+border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+.btn2:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+    color: rgb(247, 102, 102);
+    /* background-color: rgb(247,102,102); */
+    /* color: #fff; */
+}
+
+.services {
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin:0;
+}
+.services .btn2{
+    background: #f1a160;
+   color:#fff;
+}
+.services .fa-solid{
+    font-size: 16px;
+    color:#fff;
+}
+/* .resServices .btn2{
+    background: #f1a160;
+   color:#fff;
+}
+.resServices .fa-solid{
+    font-size: 16px;
+    color:#fff;
+} */
+
+
+
+.containerMain{
+    display:grid;
+    grid-template-columns: 52% 45%;
+    /* align-items: center; */
+    justify-content: center;
+    
+}
+@media only screen and (max-width: 1263px) {
+    .containerMain{
+  
+        grid-template-columns: 100%;
+       
+        
+    }
+   
+  }
+  @media only screen and (max-width: 992px) {
+    .resDiv{
+        display: block;
+    }
+    .listsContainer{
+        display:none;
+    }
+    .CategorylistsContainer{
+        display:none;
+    }
+   
+ 
+  }
+  @media only screen and (max-width: 900px) {
+    .mobdiv{
+        display:flex;
+        flex-direction: column;
+    }
+   
+  }
+  @media only screen and (max-width: 800px) {
+  .services{
+    flex-direction: column;
+    width:100%;
+  }
+  }

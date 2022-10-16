@@ -1,0 +1,27 @@
+.h6{
+    color: #a16504;
+}
+a{
+    text-decoration: none;
+}
+.search{
+    padding:2px 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all ease .25s;
+    /* font-size: 18px; */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgb(224, 216, 216);
+border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+.search:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px  rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateX(2px);
+    color: rgb(247,102,102);
+}

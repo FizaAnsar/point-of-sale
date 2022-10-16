@@ -1,0 +1,182 @@
+<div class="container-fluid">
+    <div class="containerMain">
+        <div class="column1">
+            <div>
+                <app-search (searchTxtChanged)="onSearchTextEntered($event)"></app-search>
+            </div>
+
+            <!-- Sub Categorty when cick on slider/ maincategory tgese sub category are shown-->
+            <div class="CategorylistsContainer mt-2">
+
+                <div class="loop" *ngFor="let subCategory of subCategories">
+                    <div>
+                        <button class="btnSub" value="{{subCategory.categoryId}}" #Categories
+                            (click)="getsubCategoryId(Categories.value)">{{subCategory.categoryName}}</button>
+                    </div>
+                </div>
+            </div>
+            <!-- btns main menus food section -->
+            <div class="bg-light listsContainer mt-2">
+
+                <div class="loop" *ngFor="let FoodSection of menus">
+                    <div *ngIf="searchText === '' || FoodSection.menuName.toLowerCase().includes(searchText)"
+                        class="btn btns btn-lg">
+                        <button id="btn" (click)="increment('val')"
+                                        (click)="getMenusDetail({menuName:FoodSection.menuName, menuPrice: FoodSection.menuPrice})" 
+                                       >{{FoodSection.menuName}}
+                                    </button>
+                        <p>Rs: {{FoodSection.menuPrice}} </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- sider main Category -->
+            <section>
+                <div class="product">
+                    <div class="container-fluid cont">
+                        <div class="slider-wrap">
+                            <div class="slider-main">
+                                <button class="item" *ngFor="let category of categories"
+                                    [attr.aria-label]="category.sectionName" value="{{category.sectionId}}"
+                                    (click)="clicked(mainCategories.value)" #mainCategories>
+                                    {{category.sectionName}}
+                                </button>
+                            </div>
+                            <div class="button-area">
+                                <button type="button" class="prev" appPrev><i
+                                        class="fa-solid fa-angle-left"></i></button>
+                                <button type="button" class="next" appNext><i
+                                        class="fa-solid fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container-fluid justify-content-space-between services">
+
+                <button type="button" class=" btn2">
+                    <div class="fa-icon">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <div>
+                        Takeaway
+                    </div>
+                    <div class="numbers">
+                        ({{count}})
+                    </div>
+                </button>
+                <button type="button" class=" btn2 ">
+                    <div class="fa-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        Delivery
+                    </div>
+                    <div class="numbers">
+                        ({{count}})
+                    </div>
+                </button>
+                <button type="button" class="  btn2 ">
+                    <div class="fa-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        Dine-in
+                    </div>
+                    <div class="numbers">
+                        ({{count}})
+                    </div>
+                </button>
+
+            </div>
+            <!-- for small Screen -->
+            <div class="resDiv bg-light p-2">
+                <a class="btn menures" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="MenuItems" (click)="isCollapsed = !isCollapsed"
+                    [attr.aria-expanded]="!isCollapsed">
+                    <div>Menu Items</div>
+                    <div>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </a>
+                <div class="collapse" id="MenuItems" [ngbCollapse]="isCollapsed">
+                    <div class="card card-body">
+                        <!-- Services for small Screen -->
+                        <!-- <section class="navbar">
+                            <div class="container-fluid justify-content-space-between resServices">
+
+                                <button type="button" class="btn btns btn2">
+                                    <div class="fa-icon">
+                                        <i class="fa-solid fa-person"></i>
+                                    </div>
+                                    <div>
+                                        Takeaway
+                                    </div>
+                                    <div class="numbers">
+                                        ({{count}})
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btns btn2 ">
+                                    <div class="fa-icon">
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        Delivery
+                                    </div>
+                                    <div class="numbers">
+                                        ({{count}})
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btns btn2 ">
+                                    <div class="fa-icon">
+                                        <i class="fa-solid fa-utensils"></i>
+                                    </div>
+                                    <div>
+                                        Dine-in
+                                    </div>
+                                    <div class="numbers">
+                                        ({{count}})
+                                    </div>
+                                </button>
+
+                            </div>
+                        </section> -->
+                        <div class="CategorylistsContainersmall mt-2">
+
+                            <div class="loop" *ngFor="let subCategory of subCategories">
+                                <div>
+                                    <button class="btnSub" value="{{subCategory.categoryId}}" #Categories
+                                        (click)="getsubCategoryId(Categories.value)">{{subCategory.categoryName}}</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- in small screen main menu  -->
+                        <div class="mobdiv bg-light">
+                            <div class="loop" *ngFor="let FoodSection of menus">
+                                <div class="btn btns btn-lg"
+                                    *ngIf="searchText === '' || FoodSection.menuName.toLowerCase().includes(searchText)">
+                                    <button id="btn" (click)="increment('val')"
+                                        (click)="getMenusDetail({menuName:FoodSection.menuName, menuPrice: FoodSection.menuPrice})" 
+                                       >{{FoodSection.menuName}}
+                                    </button>
+                                    <p>Rs: {{FoodSection.menuPrice}} </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <app-orders [orderDetailName]="getMenuName()"
+            [orderDetailPrice]="getMenuPrice()"
+            ></app-orders>
+        </div>
+    </div>
+</div>

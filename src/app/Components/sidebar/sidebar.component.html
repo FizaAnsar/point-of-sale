@@ -1,0 +1,67 @@
+<div class="navigation" [class.active]="active">
+    <ul>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fa-solid fa-basket-shopping"></i></span>
+          <span class="title">POS App</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <span class="icon"><i class="fa fa-house-user" ></i></span>
+          <span class="title">Dashboard</span>
+         
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Inventory">
+            <span class="icon">
+
+                <i class="fa-solid fa-database"></i>
+            </span>
+          <span class="title">Inventory</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Reporters">
+            <span class="icon">
+
+                <i class="fa-solid fa-chart-column"></i>
+            </span>
+          <span class="title">Reporters</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="HR">
+            <span class="icon"><i class="fa fa-user"></i></span>
+          <span class="title">HR</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="Marketing">
+            <span class="icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+            </span>
+          <span class="title">Marketing</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="tooltip" data-placement="right" title="CookBook">
+            <span class="icon">
+
+                <i class="fa-solid fa-book"></i>
+            </span>
+          <span class="title">CookBook</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" targer="_blank" (click)="logout()" data-toggle="tooltip" data-placement="right" title="SignOut">
+          <span class="icon"><i class="fa fa-arrow-right-from-bracket"></i></span>
+          <span class="title">sign out</span>
+        </a>
+      </li>
+    </ul>
+    <div class="toggle" (click)="toggleClass()"></div>
+  </div>
+  

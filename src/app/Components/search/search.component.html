@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <div class="container-fluid">
+      <a class="h6" ngbDropdown>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false" ngbDropdownToggle>
+        Select Customer
+    </a>
+    <ul class="dropdown-menu" ngbDropdownMenu>
+        <li><a class="dropdown-item" href="#" ngbDropdownItem>Ali</a></li>
+        <li><a class="dropdown-item" href="#" ngbDropdownItem>Hamza</a></li>
+        <!-- <li>
+            <hr class="dropdown-divider">
+        </li> -->
+        <li><a class="dropdown-item" href="#" ngbDropdownItem>Arslan</a></li>
+    </ul>
+      </a>
+      <div class="d-flex">
+        <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()" placeholder="Search" class="search">
+      </div>
+    </div>
+  </nav>
+
+

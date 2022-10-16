@@ -1,0 +1,99 @@
+.scrollable {
+    display: block;
+    height: 250px;
+    overflow-y: scroll;
+
+    /* overflow-y: scroll; */
+}
+/* order */
+/* .item_name{
+    text-align: center;
+}
+.price{
+    text-align: center;
+} */
+.orderMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+    /* border:5px solid red; */
+
+}
+
+.orderContainer {
+    display: grid;
+    background: rgb(226, 224, 224);
+    padding: 20px;
+    margin: 5px 0;
+}
+
+.about_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.numbers {
+    display: flex;
+}
+
+.numbers .number {
+    margin: 0 5px;
+}
+
+/* order no table no & gross amount */
+.ordersectionName {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+    justify-content: center;
+    background: rgb(247, 155, 102);
+
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    color: #fff;
+}
+
+.orderTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.orderTitle {
+    padding: 5px;
+}
+
+.orderTitle h4 {
+    font-weight: bolder;
+}
+
+
+/* place order, hold order, print invoice, payment */
+
+.nav-link {
+    color: rgba(245,117,100,1);
+    /* background: rgba(255,255,255,0.4); */
+    border-radius: 10px;
+    /* border: 1px solid rgba(255,255,255,0.2); */
+    box-shadow: 6px 6px 10px -5px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -11px rgb(224, 216, 216);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    /* margin:0 2px; */
+}
+
+.nav-link:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}

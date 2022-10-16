@@ -7,8 +7,17 @@ import { SigninComponent } from './Components/signin/signin.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
-import { TokenInterceptorService } from './services/token-interceptor.service';
+import {HttpClientModule} from '@angular/common/http'
+import { authInterceptorProviders } from './services/token-interceptor.service';
+import { CategoriesComponent } from './Components/categories/categories.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NextDirective } from './Directives/next.directive';
+import { PrevDirective } from './Directives/prev.directive';
+import { CategoriesItemComponent } from './Components/categories-item/categories-item.component';
+import { SearchComponent } from './Components/search/search.component';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import { OrdersComponent } from './Components/orders/orders.component';
 
 
 @NgModule({
@@ -16,7 +25,15 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     AppComponent,
     SigninComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    CategoriesComponent,
+    HeaderComponent,
+    NextDirective,
+    PrevDirective,
+    CategoriesItemComponent,
+    SearchComponent,
+    SidebarComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -24,10 +41,11 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
     
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   // {provide:HTTP_INTERCEPTORS,useClass:TokenInterceptorService,multi:true}
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,124 @@
+<!-- order Tabel -->
+<!-- <div class="scrollable">
+
+    <table class="table my-2 bg-light">
+        <thead class=" thead text-light text-center">
+            <tr>
+                <th scope="col">Items</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total AMOUNT</th>
+                <th scope="col"><i class="fa-solid fa-delete-left"></i></th>
+            </tr>
+
+        </thead>
+
+        <tbody class="" *ngFor="let category_name of categories">
+            <tr>
+            <td scope="col">{{category_name.sectionName}}</td>
+            <td scope="col">QTY</td>
+            <td scope="col">PRICE</td>
+            <td scope="col">AMOUNT</td>
+            <td scope="col">ACTION</td>
+          </tr>   
+      
+
+        </tbody>
+
+    </table>
+</div> -->
+<div class="ordersectionName">
+    <div class="orderTitle">
+
+        <h4>New Orders</h4>
+    </div>
+    <div class="orderTable">
+        <div class="tableno">
+            Table No: 
+            <div class="value">
+                (N/A)
+            </div>
+        </div>
+        <div class="orderno">
+            Order No:
+             <div class="value">
+                (N/A)
+            </div>
+        </div>
+        <div class="grossamount">
+            Gross Amount: 
+            <div class="value">
+                (N/A)
+            </div>
+        </div>
+    </div>
+</div>
+<div class="scrollable">
+    <div class="orderMain">
+    
+        <div class="orderContainer">
+            <!-- *ngFor="let category_name of categories" -->
+            <div class="item_name">
+                {{orderDetailName}}
+                <!-- {{category_name.sectionName}} -->
+            </div>
+            <div class="price">{{orderDetailPrice}}</div>
+            <div class="quantity">
+                <div class="numbers">
+                    <div class="add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="number">
+                       
+                        {{number}}
+                    </div>
+                    <div class="minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                </div>
+                <div class="delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="order-btnTables">
+    <ul class="nav nav-pills nav-justified my-21">
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Place Order
+                <div class="fa-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Hold
+                Order
+                <div class="fa-icon">
+                    <i class="fa-solid fa-pause"></i>
+                </div>
+            </a>
+        </li>
+   
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Print Invoice
+                <div class="fa-icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Payments
+                <div class="fa-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+            </a>
+        </li>
+    
+  
+    </ul>
+  </div>
+

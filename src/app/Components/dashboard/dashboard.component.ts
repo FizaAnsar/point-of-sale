@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FoodsecionsService } from 'src/app/services/foodsecions.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -9,13 +10,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private user:UserService, private route:Router) { }
+  constructor(private user:UserService, private route:Router, private food: FoodsecionsService) { }
 
   ngOnInit(): void {
-  }
-  logout(){
-    this.user.deleteUser();
-    this.route.navigate(['signin'])
   }
 
 }
